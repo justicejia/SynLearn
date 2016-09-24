@@ -25,13 +25,39 @@ class Test{
 //		t1.start();
 //		t2.start();
 			
-//		Lock l1=new Lock();
-//		Lock l2=new Lock();
+		
+		
+		Lock l1=new Lock();
+		Lock l2=new Lock();
+
+
+		//这个更简洁一些，也比较好理解。
+//		new Thread(new Runnable() {
+//			
+//			@Override
+//			public void run() {
+//				// TODO Auto-generated method stub
+//				l1.add1();
+//			}
+//		}).start();
+//		
+//		new Thread(new Runnable() {
+//			
+//			@Override
+//			public void run() {
+//				// TODO Auto-generated method stub
+//				l2.add1();
+//			}
+//		}).start();
+		
+		
+//		同上面一种，只不过稍微麻烦点
+		
+//		Lock samelock=new Lock();
+//		new Worker1(samelock).start();
+//		new Worker2(samelock).start();
+		
 //		new Worker1(l1).start();
 //		new Worker2(l1).start();
-		
-		Lock samelock=new Lock();
-		new Worker1(samelock).start();
-		new Worker2(samelock).start();
 	}
 }
